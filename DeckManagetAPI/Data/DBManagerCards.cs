@@ -1,20 +1,16 @@
 ﻿using DeckManagerAPI.Entities;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
 
 namespace DeckManagerAPI.Data
 {
     public class DBManagerCards
     {
-        private string JsonFilePath; 
+        private string jsonFilePath; 
         private List<Card>? dataCards; 
 
         public DBManagerCards()
         {
-            JsonFilePath = Directory.GetCurrentDirectory() + "\\Data\\dataCards.json";
+            jsonFilePath = Directory.GetCurrentDirectory() + "\\Data\\dataCards.json";
             LoadCards();
         }
 
@@ -22,9 +18,9 @@ namespace DeckManagerAPI.Data
         {
             try
             {
-                if (File.Exists(JsonFilePath))
+                if (File.Exists(jsonFilePath))
                 {
-                    string jsonContent = File.ReadAllText(JsonFilePath);
+                    string jsonContent = File.ReadAllText(jsonFilePath);
                     dataCards = JsonSerializer.Deserialize<List<Card>>(jsonContent);
                 }
                 else
@@ -45,7 +41,7 @@ namespace DeckManagerAPI.Data
             {
                 string jsonContent = JsonSerializer.Serialize(dataCards);
 
-                File.WriteAllText(JsonFilePath, jsonContent);
+                File.WriteAllText(jsonFilePath, jsonContent);
             }
             catch (Exception ex)
             {
@@ -68,6 +64,7 @@ namespace DeckManagerAPI.Data
                 existingCard.Name = card.Name;
                 existingCard.Power = card.Power;
                 existingCard.Toughness = card.Toughness;
+                existingCard.Image = card.Image;
                 SaveCards();
             }
         }
@@ -97,6 +94,7 @@ namespace DeckManagerAPI.Data
             int maxId = dataCards.Count > 0 ? dataCards.Max(c => c.Id) : 0;
             return maxId + 1;
         }
+
     }
 
 }

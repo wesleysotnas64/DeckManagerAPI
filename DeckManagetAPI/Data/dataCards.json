@@ -1,1 +1,56 @@
-[{"Id":1,"Name":"Goblin Guerreiro","Power":2,"Toughness":1},{"Id":2,"Name":"Elemental de Fogo","Power":5,"Toughness":4},{"Id":3,"Name":"Elfo Arqueiro","Power":1,"Toughness":1},{"Id":4,"Name":"Drag\u00E3o de Gelo","Power":7,"Toughness":7},{"Id":6,"Name":"Kraken Abissal","Power":8,"Toughness":10},{"Id":7,"Name":"Gnomo da Floresta","Power":1,"Toughness":1},{"Id":8,"Name":"Diabrete de \u00CDmpeto","Power":1,"Toughness":3},{"Id":9,"Name":"Rastreador Eldrazi","Power":1,"Toughness":3},{"Id":10,"Name":"Orc da Patrulha Noturna","Power":1,"Toughness":3}]
+[
+  {
+    "Id": 1,
+    "Name": "Goblin Guerreiro",
+    "Power": 2,
+    "Toughness": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Elemental de Fogo",
+    "Power": 5,
+    "Toughness": 4
+  },
+  {
+    "Id": 3,
+    "Name": "Elfo Arqueiro",
+    "Power": 1,
+    "Toughness": 1
+  },
+  {
+    "Id": 4,
+    "Name": "Drag\u00E3o de Gelo",
+    "Power": 7,
+    "Toughness": 7
+  },
+  {
+    "Id": 6,
+    "Name": "Kraken Abissal",
+    "Power": 8,
+    "Toughness": 10
+  },
+  {
+    "Id": 7,
+    "Name": "Gnomo da Floresta",
+    "Power": 1,
+    "Toughness": 1
+  },
+  {
+    "Id": 8,
+    "Name": "Diabrete de \u00CDmpeto",
+    "Power": 1,
+    "Toughness": 3
+  },
+  {
+    "Id": 9,
+    "Name": "Rastreador Eldrazi",
+    "Power": 1,
+    "Toughness": 3
+  },
+  {
+    "Id": 10,
+    "Name": "Orc da Patrulha Noturna",
+    "Power": 1,
+    "Toughness": 3
+  }
+]

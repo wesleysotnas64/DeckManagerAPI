@@ -5,12 +5,12 @@ namespace DeckManagerAPI.Data
 {
     public class DBManagerAdministrators
     {
-        private string JsonFilePath;
+        private string jsonFilePath;
         private List<Administrator>? dataAdministrators;
 
         public DBManagerAdministrators()
         {
-            JsonFilePath = Directory.GetCurrentDirectory() + "\\Data\\dataAdministrators.json";
+            jsonFilePath = Directory.GetCurrentDirectory() + "\\Data\\dataAdministrators.json";
             LoadData();
         }
 
@@ -18,9 +18,9 @@ namespace DeckManagerAPI.Data
         {
             try
             {
-                if (File.Exists(JsonFilePath))
+                if (File.Exists(jsonFilePath))
                 {
-                    string jsonContent = File.ReadAllText(JsonFilePath);
+                    string jsonContent = File.ReadAllText(jsonFilePath);
                     dataAdministrators = JsonSerializer.Deserialize<List<Administrator>>(jsonContent);
                 }
                 else
@@ -41,7 +41,7 @@ namespace DeckManagerAPI.Data
             {
                 string jsonContent = JsonSerializer.Serialize(dataAdministrators);
 
-                File.WriteAllText(JsonFilePath, jsonContent);
+                File.WriteAllText(jsonFilePath, jsonContent);
             }
             catch (Exception ex)
             {
